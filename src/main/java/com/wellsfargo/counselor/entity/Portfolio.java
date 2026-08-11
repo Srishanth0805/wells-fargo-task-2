@@ -24,7 +24,6 @@ public class Portfolio {
     private List<Security> securities;
 
     protected Portfolio() {
-
     }
 
     public Portfolio(Client client, List<Security> securities) {
