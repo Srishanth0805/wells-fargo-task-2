@@ -20,10 +20,11 @@ public class Portfolio {
     @JoinColumn(name = "client_id", nullable = false)
     private Client client;
 
-    @OneToMany
+    @OneToMany(mappedBy = "portfolio")
     private List<Security> securities;
 
     protected Portfolio() {
+
     }
 
     public Portfolio(Client client, List<Security> securities) {
