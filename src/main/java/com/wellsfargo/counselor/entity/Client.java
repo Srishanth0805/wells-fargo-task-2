@@ -34,8 +34,7 @@ public class Client {
     @JoinColumn(name = "advisor_id", nullable = false)
     private Advisor advisor;
 
-    @OneToOne
-    @JoinColumn(name = "portfolio_id")
+    @OneToOne(mappedBy = "client")
     private Portfolio portfolio;
 
     protected Client() {
@@ -45,7 +44,6 @@ public class Client {
     public Client(String firstName, String lastName, String address,
                    String phone, String email, Advisor advisor,
                    Portfolio portfolio) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
